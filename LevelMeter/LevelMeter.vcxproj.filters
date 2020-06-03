@@ -39,6 +39,12 @@
     <ClInclude Include="pch.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="LevelCtrl.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveDC.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LevelMeter.cpp">
@@ -54,6 +60,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelCtrl.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

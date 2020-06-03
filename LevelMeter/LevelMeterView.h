@@ -35,6 +35,10 @@ protected:
 	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
 
 // Implementación
+private:
+	CLevelCtrl c_waterTank;
+
+
 public:
 	virtual ~CLevelMeterView();
 #ifdef _DEBUG
@@ -45,6 +49,10 @@ public:
 protected:
 
 // Funciones de asignación de mensajes generadas
+public:
+	afx_msg void OnBnClickedBtnInc();
+	afx_msg void OnBnClickedBtnDec();
+
 protected:
 	DECLARE_MESSAGE_MAP()
 };

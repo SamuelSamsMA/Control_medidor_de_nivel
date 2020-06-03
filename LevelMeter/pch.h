@@ -9,5 +9,6 @@
 
 // agregue aquí los encabezados que desea precompilar
 #include "framework.h"
+#include <afxwin.h>
 
 #endif //PCH_H

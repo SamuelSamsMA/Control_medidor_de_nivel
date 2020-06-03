@@ -9,6 +9,8 @@
 #include "LevelMeter.h"
 #include "MainFrm.h"
 
+#include "LevelCtrl.h"
+
 #include "LevelMeterDoc.h"
 #include "LevelMeterView.h"
 

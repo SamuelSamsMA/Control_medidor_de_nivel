@@ -10,6 +10,8 @@
 #include "LevelMeter.h"
 #endif
 
+#include "LevelCtrl.h"
+
 #include "LevelMeterDoc.h"
 #include "LevelMeterView.h"
 
@@ -27,6 +29,8 @@ BEGIN_MESSAGE_MAP(CLevelMeterView, CFormView)
 	ON_COMMAND(ID_FILE_PRINT, &CFormView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CFormView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CFormView::OnFilePrintPreview)
+	ON_BN_CLICKED(IDC_BTN_INC, &CLevelMeterView::OnBnClickedBtnInc)
+	ON_BN_CLICKED(IDC_BTN_DEC, &CLevelMeterView::OnBnClickedBtnDec)
 END_MESSAGE_MAP()
 
 // Construcción o destrucción de CLevelMeterView
@@ -45,6 +49,7 @@ CLevelMeterView::~CLevelMeterView()
 void CLevelMeterView::DoDataExchange(CDataExchange* pDX)
 {
 	CFormView::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_STATIC_LEVEL, c_waterTank);
 }
 
 BOOL CLevelMeterView::PreCreateWindow(CREATESTRUCT& cs)
@@ -110,3 +115,15 @@ CLevelMeterDoc* CLevelMeterView::GetDocument() const // La versión de no depura
 
 
 // Controladores de mensajes de CLevelMeterView
+
+
+void CLevelMeterView::OnBnClickedBtnInc()
+{
+	c_waterTank.setValue(c_waterTank.getValue() + 20);
+}
+
+
+void CLevelMeterView::OnBnClickedBtnDec()
+{
+	c_waterTank.setValue(c_waterTank.getValue() - 10);
+}
